@@ -1,18 +1,53 @@
 
 "use client"
+import react ,{useState} from "react";
+import Menu from "@/MenuData";
 
 const Nav = ()=> {
+  const [activePage, setActivePage] = useState(null);
+  const [submenuVisible, setSubmenuVisible] = useState(false);
+
+const handleMouserEnter = (e)=> { 
+
+  setActivePage(e)
+  setSubmenuVisible(true);
+}
+
+const handleMouserleave = ()=> { 
+
+  setActivePage(false)
+  setSubmenuVisible(false);
+}
+
   return (
-    <main className="flex justify-between w-full p-1 relative border-2 border-black">
+    <main className="flex mt-1 justify-between  w-full   p-1  border-2 border-black">
       <div className="w-[10rem] flex bg-yellow-400 justify-center p-1  ">
         <img
           className="w-[30px] h-[30px]"
           src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Logo_TV_2015.svg/1200px-Logo_TV_2015.svg.png"
         />
       </div>
-      <div className="navigation">
+      <div className="navigation w-full ">
      
+      <ul className="flex h-full justify-around items-center   ">
+        {
+Menu.map((item)=>{
+  return(
+    <li key={item.id} className="cursor-pointer py-2 " onMouseEnter={()=>handleMouserEnter(item.id)} onMouseLeave={handleMouserleave} >
+    
+       <p className={ `${activePage === item.id ? "text-red-900" : ""}`}> {item.name} </p>
+      
+    </li>
 
+  )
+})
+
+        }
+      </ul>
+     
+<div className={ `${activePage ? "block" : "hidden"} absolute left-0  top-[3.3rem] w-full h-[20rem] border-2 border-black`} onMouseEnter={handleMouserEnter} onMouseLeave={handleMouserleave}>
+
+</div>
       </div>
       <div className=" flex mr-3 items-center gap-2 Icon-main">
       <div>
