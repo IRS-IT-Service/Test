@@ -9,6 +9,7 @@ import { FaRegUser } from "react-icons/fa";
 import { FaSearch } from "react-icons/fa";
 import { ImCross } from "react-icons/im";
 import { FaLock } from "react-icons/fa";
+import SubNav from "./SubNav";
 const Nav = () => {
   const [activePage, setActivePage] = useState(null);
   const [submenuImage, setSubmenuImage] = useState(null);
@@ -195,8 +196,19 @@ const Nav = () => {
 <p className="">Track</p>
 </div>
 </div>
-<div className="border-2 grow border-blue-900">
+<div className="flex flex-col  grow">
+<p className="font-bold text-center fontIcon mt-1">SHOP BY CATEGORY</p>
+{
+  Menu.map((item,index)=>{
+    return(
+      <div key={index} className="divide-y divide-gray-400">
+    <SubNav item={item} key={index} />
 
+        </div>
+    )
+
+  })
+}
 </div>
 </div>
 <div className="grow relative" onClick={()=>setShowNavMenu(false)}>
