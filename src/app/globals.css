@@ -15,8 +15,15 @@
 .arrow-color{
   background-image: linear-gradient(to right top, #444e03, #384803, #2d4303, #223d03, #173702)
 }
-
-
+.icon{
+  background-color: rgb(252, 207, 6);
+}
+.fontIcon{
+  color:rgb(252, 207, 6)
+}
+.borderColor{
+  border:1px solid rgb(252, 207, 6)
+}
 
 @layer utilities {
   .text-balance {
