@@ -6,11 +6,11 @@ const Menu = [
         url:"https://image.freepik.com/free-vector/up-50-percentage-off-great-sale-poster-design_1302-26070.jpg",
         subMenu: [
             {
-title:"Popular"
+        title:"Popular"
             },
           {
             name: "Clothing",
-            path: "/clothing",
+            path: "/",
             url:"https://c1.peakpx.com/wallpaper/573/909/315/store-clothes-clothing-line-fashion-wallpaper.jpg"
           },
           {

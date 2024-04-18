@@ -42,7 +42,7 @@ const Nav = () => {
   return (
  
   <main>
-      <div className="lg:flex hidden mt-1 justify-between  w-full   p-1 shadow-lg ">
+      <div className="lg:flex hidden mt-1 justify-between  w-full   p-1 shadow-lg  ">
     
       <div className="w-[10rem] flex icon justify-center p-1  ">
         <img
@@ -145,7 +145,7 @@ const Nav = () => {
       </div>
 {/* Mobile Responsive */}
 
-<div className="lg:hidden flex flex-col   icon   w-full   p-1 shadow-lg ">
+<div className="lg:hidden flex flex-col   icon   w-full   p-1 shadow-lg z-50 ">
   <div className="flex justify-between">
 <div onClick={() => setShowNavMenu(!navMenu)} className=' h-8 pt-3'>
           <div
@@ -196,12 +196,13 @@ const Nav = () => {
 <p className="">Track</p>
 </div>
 </div>
-<div className="flex flex-col  grow">
-<p className="font-bold text-center fontIcon mt-1">SHOP BY CATEGORY</p>
+<div className="flex flex-col  grow ">
+<p className="font-bold text-center fontIcon mt-1 p-2">SHOP BY CATEGORY</p>
+<div className="overflow-auto h-[90vh]">
 {
   Menu.map((item,index)=>{
     return(
-      <div key={index} className="divide-y divide-gray-400">
+      <div key={index} className="divide-y divide-gray-400 ">
     <SubNav item={item} key={index} />
 
         </div>
@@ -209,6 +210,7 @@ const Nav = () => {
 
   })
 }
+</div>
 </div>
 </div>
 <div className="grow relative" onClick={()=>setShowNavMenu(false)}>
