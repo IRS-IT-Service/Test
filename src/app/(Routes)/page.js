@@ -118,7 +118,7 @@ const Images = [{
 <div className="flex w-full justify-center mt-5">
 
    <div  className="Cards   mt-2 grid  md:grid-cols-3 lg:grid-cols-4 sm:grid-cols-3 xs:grid-cols-2 xxs:grid-cols-1 xl:grid-cols-5 gap-5 group" >
-   {Array.from({length:100}).map((_ ,index)=>{
+   {Array.from({length:10}).map((_ ,index)=>{
 return(
 
   <div key={index} className="duration-500 w-[14rem] h-[20rem] border-[1px] border-black overflow-hidden cursor-pointer  group-hover:scale-[0.85] hover:!scale-100 ">
