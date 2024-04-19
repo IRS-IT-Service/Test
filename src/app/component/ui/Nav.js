@@ -57,7 +57,7 @@ const Nav = () => {
             return (
               <li
                 key={item.id}
-                className="cursor-pointer p-2  "
+                className="cursor-pointer p-2.5   "
                 onMouseEnter={() => handleMouserEnter(item.id)}
                 onMouseLeave={handleMouserleave}
               >
@@ -81,7 +81,7 @@ const Nav = () => {
                 <div
                   className={`${
                     activePage === item.id ? "block" : "hidden"
-                  } absolute flex left-0 right-0 m-auto shadow-2xl p-4  top-[3.1rem] w-4/5 h-[20rem] z-50 bg-[#ffff] px-2 border-2 cursor-default items-center transition-all  duration-[0.5s] ease-in-out`}
+                  } absolute flex left-0 right-0 m-auto shadow-2xl p-4  top-[3.1rem] w-4/5 h-[20rem] z-50 bg-[#ffff] px-2 border-2 cursor-default items-center transition-all  duration-[0.5s] ease-in-out `}
                   onMouseEnter={() => handleMouserEnter(item.id)}
                   onMouseLeave={handleMouserleave}
                 >
