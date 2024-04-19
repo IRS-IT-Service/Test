@@ -29,7 +29,7 @@ const handleOpenChildren = (id) => {
   };
   const updateSubchildren = (subChildren) => {
     return (
-      <div className="text-[15px] text-black">
+      <div className="text-[15px] text-black ">
       {subChildren.map((subItem, index) =>
         !subItem.title && (
           <Link

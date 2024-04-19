@@ -9,6 +9,7 @@ import { FaRegUser } from "react-icons/fa";
 import { FaSearch } from "react-icons/fa";
 import { ImCross } from "react-icons/im";
 import { FaLock } from "react-icons/fa";
+
 import SubNav from "./SubNav";
 const Nav = () => {
   const [activePage, setActivePage] = useState(null);
@@ -41,8 +42,8 @@ const Nav = () => {
 
   return (
  
-  <main>
-      <div className="lg:flex hidden mt-1 justify-between  w-full   p-1 shadow-lg  ">
+  <main className="sticky top-0 z-[100] bg-slate-100">
+      <div className="lg:flex hidden mt-1 justify-between  w-full   p-1 shadow-lg   ">
     
       <div className="w-[10rem] flex icon justify-center p-1  ">
         <img
@@ -145,8 +146,8 @@ const Nav = () => {
       </div>
 {/* Mobile Responsive */}
 
-<div className="lg:hidden flex flex-col   icon   w-full   p-1 shadow-lg z-50 ">
-  <div className="flex justify-between">
+<div className="lg:hidden flex flex-col   icon   w-full   p-1 shadow-lg  ">
+  <div className="flex justify-between ">
 <div onClick={() => setShowNavMenu(!navMenu)} className=' h-8 pt-3'>
           <div
  
@@ -184,7 +185,7 @@ const Nav = () => {
 
           </div>
 </div>
-<div className={`mobileMenu ${navMenu ? "left-0" : "left-[-500rem]"} transition-all  duration-[0.5s] ease absolute flex top-0 w-full h-[100dvh] bg-[rgba(0,0,0,0.5)]`}>
+<div className={`mobileMenu ${navMenu ? "left-0" : "left-[-500rem]"} transition-all  duration-[0.5s] ease absolute flex top-0 w-full h-[100dvh] bg-[rgba(0,0,0,0.5)] z-[100]`}>
 <div className="w-4/5 flex flex-col bg-[#ffff]">
 <div className="w-full flex gap-2 h-12 p-2 icon ">
 <div className="flex w-1/2  text-[#fff] gap-2 justify-center  bg-[rgba(0,0,0,0.5)] items-center p-2">
